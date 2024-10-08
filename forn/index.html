@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Colorlib Templates" />
+    <meta name="author" content="Colorlib" />
+    <meta name="keywords" content="Colorlib Templates" />
+
+    <!-- Title Page-->
+    <title>Portal Registration</title>
+
+    <!-- Icons font CSS-->
+    <link
+      href="vendor/mdi-font/css/material-design-iconic-font.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <link
+      href="vendor/font-awesome-4.7/css/font-awesome.min.css"
+      rel="stylesheet"
+      media="all"
+    />
+    <!-- Font special for pages-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all" />
+    <link
+      href="vendor/datepicker/daterangepicker.css"
+      rel="stylesheet"
+      media="all"
+    />
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- <link rel="stylesheet" href="../css/"> -->
+  </head>
+
+  <body id="top">
+
+    <!-- preloader -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.svg" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="../index.html" title="Home">Home</a></li>
+                <li><a href="../about.html" title="About">About</a></li>
+                <li><a href="../events.html" title="Events">Events</a></li>
+                <li class="current"><a href="contact.html" title="Contact us">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header>
+
+    <!-- page header -->
+    <section class="page-header page-header--contact">
+        <div class="gradient-overlay"></div>
+        <div class="row page-header__content">
+            <div class="column">
+                <h1>AMBASSADOR PORTAL</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- form section -->
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-4">
+                <div class="card-body">
+                    <h2 class="title">Please fill out the form</h2>
+                       <!-- Success and Error Messages -->
+            <?php if ($success_message): ?>
+            <div class="message success">
+                <?php echo $success_message; ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($error_message): ?>
+            <div class="message error">
+                <?php echo $error_message; ?>
+            </div>
+        <?php endif; ?>
+                    <form method="POST" enctype="multipart/form-data" action="register.php">
+                        <!-- Name Fields -->
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">First Name</label>
+                                    <input class="input--style-4" type="text" name="first_name" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Last Name</label>
+                                    <input class="input--style-4" type="text" name="last_name" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Birthday and Gender Fields -->
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Birthday</label>
+                                    <div class="input-group-icon">
+                                        <input class="input--style-4 js-datepicker" type="text" name="birthday" />
+                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Gender</label>
+                                    <div class="p-t-10">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="gender" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="gender" />
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Country and State Fields -->
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Country</label>
+                                    <input class="input--style-4" type="text" name="country" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">State</label>
+                                    <input class="input--style-4" type="text" name="state" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email and Phone Fields -->
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email" />
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="text" name="phone" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resident address Fields -->
+                        <div class="input-group">
+                            <label class="label">Resident Address</label>
+                            <input class="input--style-4" type="text" name="address" />
+                        </div>
+
+                        <!-- Marital Status and Occupation -->
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Marital status</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="marital_status">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Married</option>
+                                            <option>Single</option>
+                                            <option>Courting</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Occupation</label>
+                                    <input class="input--style-4" type="text" name="occupation" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Denomination Field -->
+                        <div class="input-group">
+                            <label class="label">Denomination</label>
+                            <input class="input--style-4" type="text" name="denomination" />
+                        </div>
+
+                        <!-- Volunteer Field -->
+                        <div class="input-group">
+                            <label class="label">Volunteer</label>
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="volunteer">
+                                    <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option>Writing article</option>
+                                    <option>Gospel love outreach</option>
+                                    <option>Administrative management team</option>
+                                    <option>Media and logistics</option>
+                                    <option>Welfare team</option>
+                                    <option>Project management</option>
+                                    <option>Participation in any special contest</option>
+                                    <option>Position</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+
+                        <!-- Position Field -->
+                        <div class="input-group">
+                            <label class="label">Would you like to hold any Position in your district Area?</label>
+                            <div class="p-t-10">
+                                <label class="radio-container m-r-45">Yes
+                                    <input type="radio" checked="checked" name="position" />
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">No
+                                    <input type="radio" name="position" />
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Upload Passport Photo -->
+                        <div class="input-group">
+                            <label class="label">Upload Passport Photo</label>
+                            <input class="input--style-4" type="file" name="passport_photo" accept="image/*">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Jquery JS-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <!-- Vendor JS-->
+        <script src="vendor/select2/select2.min.js"></script>
+        <script src="vendor/datepicker/moment.min.js"></script>
+        <script src="vendor/datepicker/daterangepicker.js"></script>
+    
+        <!-- Main JS-->
+        <script src="js/global.js"></script>
+        <script src="../js/main.js"></script>
+</body>
+
+
+  <!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+<!-- end document-->
